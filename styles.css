@@ -1,0 +1,357 @@
+body {
+    margin: auto;
+    font-family: 'PT Sans', sans-serif;
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.75fr 1fr 0.75fr 1.5fr 0.25fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "CD SA KB S"
+        "main main main main"
+        "vid1 form form vid2"
+        "job reachme reachme socials";
+}
+
+.nav { 
+    grid-area: nav; 
+    display: inline-block;
+}
+
+.logo {
+    float: left;
+    padding: 2em;
+}
+
+.aceandunc {
+    padding: 2em;
+    width: 5em;
+    height: 5em;
+    float: right;
+}
+
+.menu {
+    float: left;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+}
+
+.menu li{
+    float: left;
+    margin-left: 15px;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    background: white;
+    list-style: none;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 12px;
+
+}
+
+.menu li:hover {
+    background: #a5dff9;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.header { 
+    grid-area: header; 
+    background-color: #a5dff9;
+    text-align: center;
+    max-width: auto;
+    border: 1px gray;
+    margin: 0;
+    overflow-wrap: wrap;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    text-emphasis: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+i {
+    color: gray;
+}
+
+.CD { 
+    grid-area: CD; 
+    display: block;
+    padding: 1em;
+}
+
+.SA { 
+    grid-area: SA; 
+    display: block; 
+    padding: 1em;
+}
+
+.KB { 
+    grid-area: KB; 
+    display: block; 
+    padding: 1em;
+    overflow-wrap: wrap;
+}
+
+.S { 
+    grid-area: S; 
+    display: block; 
+    padding: 1em; 
+    overflow-wrap: wrap; 
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.caption {
+    background-color: #fff9c8;
+    text-align: center;
+    height: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #feee7d;
+    border-top: 1px solid #feee7d;
+
+}
+
+.main { 
+    border-top: 3px solid #60c5ba;
+    grid-area: main;
+    padding: 2em;
+    float: left;
+    display: inline-flex;
+    
+}
+
+
+.button1 {
+    background-color: #ee769c;
+    border: black;
+    color: black;
+    padding: 25px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 1em;
+}
+
+.button1:hover {
+    background-color: #ef5285;
+}
+
+.vid1 { 
+    grid-area: vid1; 
+    display: block;
+    padding: 1em;
+}
+
+.vid2 { 
+    grid-area: vid2; 
+    display: block;
+    padding: 1em;
+}
+
+.form {
+    grid-area: form;
+    display: block;
+    padding: 1em;
+    background-color: #feee7d;
+    border-radius: 4px;
+}
+
+input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 5px 5px 5px;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: white;
+    padding: 20px 40px;
+    border: black;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subcont {
+    text-align: center;
+    padding: 2em;
+}
+
+input[type=submit]:hover {
+    background-color: #a5dff9;
+}
+
+.job { 
+    grid-area: job; 
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    text-align: left;
+    padding-left: 2em;
+}
+
+.reachme {
+    grid-area: reachme;
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+.socials {
+    grid-area: socials;
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#email {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#yt {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#instagram {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#email:hover {
+    color: white;
+}
+
+#yt:hover {
+    color: red;
+}
+
+#instagram:hover {
+    color: #ef5285;
+}
+
+@media screen and (max-width: 1045px)
+{
+.aceandunc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px)
+{
+    .menu {
+        display: none;
+    }
+   
+   .nav-mobile {
+     display: block;
+     list-style: none;
+     text-align: center;
+     margin: 0;
+   }
+   .nav-mobile_row, .nav-mobile a {
+    display: block;
+    text-align: right;
+
+  }
+   
+   .nav-mobile ul {
+     background: #a5dff9;
+   }
+   
+
+   .nav-mobile li:hover a {
+    background: #a5dff9;
+  }
+  
+}
+
+@media screen and (max-width: 767px)
+{
+    .menu {
+     display: none;
+    }
+   
+   .nav-mobile {
+     display: block;
+     list-style: none;
+     text-align: center;
+     margin: 0;
+   }
+   .nav-mobile_row, .nav-mobile a {
+    display: block;
+    text-align: right;
+
+  }
+   
+   .nav-mobile ul {
+     background: #a5dff9;
+   }
+   
+
+   .nav-mobile li:hover a {
+    background: #a5dff9;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.75fr 1fr 1fr 0.75fr 1.5fr 1.5fr 0.25fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "CD CD KB KB"
+        "SA SA S S"
+        "main main main main"
+        "vid1 vid1 vid2 vid2"
+        "form form form form"
+        "job reachme reachme socials";
+}
+
+
+}
