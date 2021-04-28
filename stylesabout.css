@@ -1,0 +1,287 @@
+body {
+    margin: auto;
+    font-family: 'PT Sans', sans-serif;
+    background-color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 1fr 1fr 0.25fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "pic1 learn1 learn1 learn1"
+        "learn2 learn2 learn2 pic2"
+        "job reachme reachme socials";
+}
+
+.nav { 
+    grid-area: nav; 
+    display: inline-block;
+}
+
+.logo {
+    float: left;
+    padding: 2em;
+}
+
+.aceandunc {
+    padding: 2em;
+    width: 5em;
+    height: 5em;
+    float: right;
+}
+
+.menu {
+    float: left;
+    list-style: none;
+    text-align: right;
+    margin: 0;
+}
+
+.menu li{
+    float: left;
+    margin-left: 15px;
+    padding: 1rem;
+    position: relative;
+    text-align: center;
+    background: white;
+    list-style: none;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    padding: 12px;
+
+}
+
+.menu li:hover {
+    background: #a5dff9;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.header { 
+    grid-area: header; 
+    background-color: #a5dff9;
+    text-align: center;
+    max-width: auto;
+    border: 1px gray;
+    margin: 0;
+    overflow-wrap: wrap;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+i {
+    color: gray;
+}
+
+p {
+    padding: 1em;
+}
+
+.learn1 { 
+    grid-area: learn1;
+    padding: 1em;
+    display: block;
+}
+
+.learn2 { 
+    border-top: 3px solid #feee7d;
+    grid-area: learn2;
+    padding: 1em;
+    display: block;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.pic1 {
+    grid-area: pic1;
+    padding: 1em;
+    display: block;
+}
+
+.pic2 {
+    border-top: 3px solid #feee7d;
+    grid-area: pic2;
+    padding: 1em;
+    display: block;
+}
+
+.job { 
+    grid-area: job; 
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    text-align: left;
+    padding-left: 2em;
+}
+
+.reachme {
+    grid-area: reachme;
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+.socials {
+    grid-area: socials;
+    background-color: #60c5ba;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+#email {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#yt {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#instagram {
+    text-decoration: none;
+    padding: 0.25em;
+    color: black;
+}
+
+#email:hover {
+    color: white;
+}
+
+#yt:hover {
+    color: red;
+}
+
+#instagram:hover {
+    color: #ef5285;
+}
+
+@media screen and (max-width: 1045px)
+{
+.aceandunc {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px)
+{
+    .menu {
+        display: none;
+    }
+   
+   .nav-mobile {
+     display: block;
+     list-style: none;
+     text-align: center;
+     margin: 0;
+   }
+   .nav-mobile_row, .nav-mobile a {
+    display: block;
+    text-align: right;
+
+  }
+   
+   .nav-mobile ul {
+     background: #a5dff9;
+   }
+   
+
+   .nav-mobile li:hover a {
+    background: #a5dff9;
+  }
+  
+}
+
+@media screen and (max-width: 767px)
+{
+    .menu {
+     display: none;
+    }
+   
+   .nav-mobile {
+     display: block;
+     list-style: none;
+     text-align: center;
+     margin: 0;
+   }
+   .nav-mobile_row, .nav-mobile a {
+    display: block;
+    text-align: right;
+
+  }
+   
+   .nav-mobile ul {
+     background: #a5dff9;
+   }
+   
+
+   .nav-mobile li:hover a {
+    background: #a5dff9;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.25fr 0.5fr 0.5fr 0.5fr 0.5fr 0.25fr;
+    grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "pic1 pic1 pic1 pic1"
+        "learn1 learn1 learn1 learn1"
+        "pic2 pic2 pic2 pic2"
+        "learn2 learn2 learn2 learn2"
+        "job reachme reachme socials";
+}
+
+.learn1 { 
+    border-top: 3px solid #feee7d;
+    grid-area: learn1;
+    display: block;
+}
+
+.learn2 { 
+    border-top: 3px solid #feee7d;
+    grid-area: learn2;
+    display: block;
+}
+
+.pic1 {
+    border-top: 3px solid #feee7d;
+    grid-area: pic1;
+    display: block;
+}
+
+.pic2 {
+    border-top: 3px solid #feee7d;
+    grid-area: pic2;
+    display: block;
+}
+}
